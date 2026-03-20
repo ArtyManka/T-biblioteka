@@ -102,11 +102,7 @@ public class Library
     {
         key = key.ToLower().Trim();
         return Books.Where(b =>
-            b.Title.ToLower().Contains(key) ||
-            b.Author.ToLower().Contains(key) ||
-            b.Genre.ToLower().Contains(key) ||
-            b.Year.ToString().Contains(key) ||
-            (b.Description?.ToLower().Contains(key) ?? false)).ToList();
+            b.Title.ToLower().Contains(key)).ToList();
     }
 
     public void SwitchIsReadStatus(string title)
@@ -115,6 +111,11 @@ public class Library
         if (book != null)
         {
             book.IsRead = !book.IsRead;
+            Console.WriteLine("Статус обновлён.");
+        }
+        else
+        {
+            Console.WriteLine("Этой книги нет в библиотеке");
         }
     }
 
@@ -124,15 +125,20 @@ public class Library
         if (book != null)
         {
             book.IsFavorite = !book.IsFavorite;
+            Console.WriteLine("Статус обновлён.");
+        }
+        else
+        {
+            Console.WriteLine("Этой книги нет в библиотеке");
         }
     }
     public List<Book> GetFavorites()
-{
-    return Books.Where(b => b.IsFavorite).ToList();
-}
+    {
+        return Books.Where(b => b.IsFavorite).ToList();
+    }
 
-public List<Book> GetUnread()
-{
-    return Books.Where(b => !b.IsRead).ToList();
-}
+    public List<Book> GetUnread()
+    {
+        return Books.Where(b => !b.IsRead).ToList();
+    }
 }

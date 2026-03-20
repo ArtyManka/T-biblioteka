@@ -6,6 +6,9 @@
     <RootNamespace>T_biblioteka</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Charset>UTF-8</Charset>
+    <ApplicationIcon>BigT.ico</ApplicationIcon>
+    <UserSecretsId>66db4afb-2d61-4e48-8acf-49ff6589551b</UserSecretsId>
   </PropertyGroup>
 
 </Project>

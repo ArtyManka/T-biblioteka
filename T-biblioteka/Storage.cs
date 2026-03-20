@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using System.Text.Json;
 
 public static class Storage
@@ -12,7 +13,12 @@ public static class Storage
         try
         { 
             //Trying to save all books into json file
-            var options = new JsonSerializerOptions { WriteIndented = true };
+            var options = new JsonSerializerOptions 
+            { 
+                WriteIndented = true,
+                Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase // Optional: for consistency
+            };
             string jsonString = JsonSerializer.Serialize(books, options);
             File.WriteAllText(data_file, jsonString);
         }
@@ -28,18 +34,28 @@ public static class Storage
         {
             if (File.Exists(data_file))
             {
-                string jsonString = File.ReadAllText(data_file);
-                var books = JsonSerializer.Deserialize<List<Book>>(jsonString);
-                Console.WriteLine("Загруженно успешно! \n");
-                return books ?? new List<Book>(); // If books == Null => return empty, else => return the list
+                string jsonString = File.ReadAllText(data_file, Encoding.UTF8);
+                
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                };
+                
+                var books = JsonSerializer.Deserialize<List<Book>>(jsonString, options);
+                Console.WriteLine("Данные загружены успешно! \n");
+                return books ?? new List<Book>();
             }
+            
             Console.WriteLine("Файл библиотеки не найден. Создаю новую библиотеку...");
-            Console.WriteLine("Создано успешно! \n");
-            return new List<Book>(); //If file don't exist
+            return new List<Book>();
+        }
+        catch (JsonException jsonEx)
+        {
+            Console.WriteLine($"Ошибка чтения файла: {jsonEx.Message}");
+            return new List<Book>();
         }
         catch (Exception ex)
         {
-            //Error message + return empty list
             Console.WriteLine($"Ошибка загрузки: {ex.Message}");
             return new List<Book>();
         }

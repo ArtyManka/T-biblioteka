@@ -7,6 +7,9 @@ class Program
 
     static void Main(string[] args)
     {
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+        Console.InputEncoding = System.Text.Encoding.UTF8;
+        
         var loadedBooks = Storage.LoadBooks();
         library.Books = loadedBooks;
 
@@ -15,6 +18,7 @@ class Program
         while (true)
         {
             ShowMenu();
+            Console.WriteLine();
             string choice = Console.ReadLine() ?? "";
 
             switch (choice)
@@ -129,7 +133,7 @@ class Program
             string genre = Console.ReadLine() ?? "";
 
             Console.Write("Год: ");
-            int year = GetYearFromUser();  // Extract this logic to a separate method
+            int year = GetYearFromUser(); 
 
             Console.Write("Описание (не обязательно): ");
             string description = Console.ReadLine() ?? "";
@@ -144,40 +148,39 @@ class Program
     }
 }
 
-static int GetYearFromUser()
-{
-    int year = 0;
-    int attempts = 0;
-    bool success = false;
-    
-    while (!success && attempts < 3)
+    static int GetYearFromUser()
     {
-        if (attempts > 0)
+        int year = 0;
+        int attempts = 0;
+        bool success = false;
+        
+        while (!success && attempts < 3)
         {
-            Console.WriteLine($"Попробуйте еще раз (попытка {attempts + 1}/3):");
+            if (attempts > 0)
+            {
+                Console.WriteLine($"Попробуйте еще раз (попытка {attempts + 1}/3):");
+            }
+            
+            string input = Console.ReadLine() ?? "";
+            if (int.TryParse(input, out year))
+            {
+                success = true;
+            }
+            else
+            {
+                Console.WriteLine("Неправильно указан год. Используйте только цифры.");
+                attempts++;
+            }
         }
         
-        string input = Console.ReadLine() ?? "";
-        if (int.TryParse(input, out year))
+        if (!success)
         {
-            success = true;
+            Console.WriteLine("Неправильно указан год. Автоматически был выбран год - 0.");
+            year = 0;
         }
-        else
-        {
-            Console.WriteLine("Неправильно указан год. Используйте только цифры.");
-            attempts++;
-        }
+        
+        return year;
     }
-    
-    if (!success)
-    {
-        Console.WriteLine("Неправильно указан год. Автоматически был выбран год - 0.");
-        year = 0;
-    }
-    
-    return year;
-}
-
     static void ViewBooks()
     {
         Console.Write("Сортировка по (название/автор/жанр/год/прочитано/в избранном): ");
@@ -191,6 +194,7 @@ static int GetYearFromUser()
     {
         Console.Write("Введите ключевое слово: ");
         string keyword = Console.ReadLine() ?? "";
+        Console.WriteLine("Поиск книг с похожим названием...");
         Console.Write("Сортировка по (название/автор/жанр/год/прочитано/в избранном): ");
         string sortCriteria = Console.ReadLine() ?? "";
 
@@ -212,7 +216,6 @@ static int GetYearFromUser()
         }
 
         library.SwitchIsReadStatus(title);
-        Console.WriteLine("Статус обновлён.");
     }
 
     static void SwitchFavoriteStatus()
@@ -228,7 +231,6 @@ static int GetYearFromUser()
         }
         
         library.SwitchIsFavorite(title);
-        Console.WriteLine("Избранное обновлено.");
     }
 
     static void RemoveBook()
