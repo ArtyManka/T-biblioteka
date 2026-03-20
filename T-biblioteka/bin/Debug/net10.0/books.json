@@ -1,0 +1,20 @@
+[
+  {
+    "Title": "\u0444\u044B\u0432",
+    "Author": "\u0444\u044B\u0432",
+    "Genre": "\u0444\u044B\u0432",
+    "Year": 1234,
+    "Description": "\u0444\u044B\u0432",
+    "IsRead": false,
+    "IsFavorite": false
+  },
+  {
+    "Title": "\u0430\u043F\u0440",
+    "Author": "\u0430\u043F\u0440",
+    "Genre": "\u0430\u043F\u0440",
+    "Year": 0,
+    "Description": "\u0430\u043F\u0440",
+    "IsRead": false,
+    "IsFavorite": false
+  }
+]
