@@ -1,0 +1,14 @@
+L:\projects\VisualCode\T-bank_otbor26_Task2\T-biblioteka\T-biblioteka\bin\Debug\net10.0\T-biblioteka.exe
+L:\projects\VisualCode\T-bank_otbor26_Task2\T-biblioteka\T-biblioteka\bin\Debug\net10.0\T-biblioteka.deps.json
+L:\projects\VisualCode\T-bank_otbor26_Task2\T-biblioteka\T-biblioteka\bin\Debug\net10.0\T-biblioteka.runtimeconfig.json
+L:\projects\VisualCode\T-bank_otbor26_Task2\T-biblioteka\T-biblioteka\bin\Debug\net10.0\T-biblioteka.dll
+L:\projects\VisualCode\T-bank_otbor26_Task2\T-biblioteka\T-biblioteka\bin\Debug\net10.0\T-biblioteka.pdb
+L:\projects\VisualCode\T-bank_otbor26_Task2\T-biblioteka\T-biblioteka\obj\Debug\net10.0\T-biblioteka.GeneratedMSBuildEditorConfig.editorconfig
+L:\projects\VisualCode\T-bank_otbor26_Task2\T-biblioteka\T-biblioteka\obj\Debug\net10.0\T-biblioteka.AssemblyInfoInputs.cache
+L:\projects\VisualCode\T-bank_otbor26_Task2\T-biblioteka\T-biblioteka\obj\Debug\net10.0\T-biblioteka.AssemblyInfo.cs
+L:\projects\VisualCode\T-bank_otbor26_Task2\T-biblioteka\T-biblioteka\obj\Debug\net10.0\T-biblioteka.csproj.CoreCompileInputs.cache
+L:\projects\VisualCode\T-bank_otbor26_Task2\T-biblioteka\T-biblioteka\obj\Debug\net10.0\T-biblioteka.dll
+L:\projects\VisualCode\T-bank_otbor26_Task2\T-biblioteka\T-biblioteka\obj\Debug\net10.0\refint\T-biblioteka.dll
+L:\projects\VisualCode\T-bank_otbor26_Task2\T-biblioteka\T-biblioteka\obj\Debug\net10.0\T-biblioteka.pdb
+L:\projects\VisualCode\T-bank_otbor26_Task2\T-biblioteka\T-biblioteka\obj\Debug\net10.0\T-biblioteka.genruntimeconfig.cache
+L:\projects\VisualCode\T-bank_otbor26_Task2\T-biblioteka\T-biblioteka\obj\Debug\net10.0\ref\T-biblioteka.dll

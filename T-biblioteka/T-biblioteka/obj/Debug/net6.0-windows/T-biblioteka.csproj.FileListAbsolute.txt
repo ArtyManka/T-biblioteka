@@ -1,0 +1,4 @@
+L:\projects\VisualCode\T-bank_otbor26_Task2\T-biblioteka\T-biblioteka\obj\Debug\net6.0-windows\T-biblioteka.GeneratedMSBuildEditorConfig.editorconfig
+L:\projects\VisualCode\T-bank_otbor26_Task2\T-biblioteka\T-biblioteka\obj\Debug\net6.0-windows\T-biblioteka.AssemblyInfoInputs.cache
+L:\projects\VisualCode\T-bank_otbor26_Task2\T-biblioteka\T-biblioteka\obj\Debug\net6.0-windows\T-biblioteka.AssemblyInfo.cs
+L:\projects\VisualCode\T-bank_otbor26_Task2\T-biblioteka\T-biblioteka\obj\Debug\net6.0-windows\T-biblioteka.csproj.CoreCompileInputs.cache
