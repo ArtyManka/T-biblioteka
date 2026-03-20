@@ -14,7 +14,7 @@
 - .NET 6.0 или выше
 
 ## Как запустить:
-1. Найдитек желтую иконку с именем "Т-библиотека" (T-biblioteka\bin\Debug\net10.0\Т-библиотека.exe).
+1. Найдитек желтую иконку с именем "Т-библиотека" (T-biblioteka\bin\Debug\net10.0\Т-библиотека.exe или по ссылке https://github.com/ArtyManka/T-biblioteka/tree/V4(final)/T-biblioteka/bin/Debug/net10.0).
 2. Щелкните по ней 2 раза.
 
 ## Использование:
